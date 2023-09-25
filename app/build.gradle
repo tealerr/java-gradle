@@ -19,10 +19,19 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'demogradle.App'
+    mainClass = 'demogradle.Looping'
 }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java.srcDirs = ['src/main/java']
+    }
+}
+

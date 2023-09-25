@@ -1,9 +1,11 @@
-package demogradle.operator;
+package demogradle;
 
-public class Logic {
+public class DataType {
 
   public static void main(String[] args) {
-    System.out.println("This Logic operator class");
+    logicAnd();
+    logicOr();
+    logicNot();
   }
 
   public static void logicAnd() {

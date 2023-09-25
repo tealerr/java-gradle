@@ -1,4 +1,4 @@
-package demogradle.operator;
+package demogradle;
 
 import java.util.Objects;
 

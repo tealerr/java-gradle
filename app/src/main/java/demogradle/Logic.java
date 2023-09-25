@@ -1,11 +1,9 @@
-package demogradle.primitivetype;
+package demogradle;
 
-public class DataType {
+public class Logic {
 
   public static void main(String[] args) {
-    logicAnd();
-    logicOr();
-    logicNot();
+    System.out.println("This Logic operator class");
   }
 
   public static void logicAnd() {

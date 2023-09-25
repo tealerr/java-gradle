@@ -1,4 +1,4 @@
-package demogradle.loop;
+package demogradle;
 
 public class Looping {
 

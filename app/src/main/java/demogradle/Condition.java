@@ -1,4 +1,4 @@
-package demogradle.condition;
+package demogradle;
 
 public class Condition {
 
