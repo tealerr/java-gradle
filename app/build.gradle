@@ -1,13 +1,14 @@
 plugins {
-  id "org.sonarqube" version "4.3.1.3277"
+    id "java"
+    id "org.sonarqube" version "4.3.1.3277"
 }
 
-sonar {
-  properties {
-    property "sonar.projectKey", "tealerr_java-gradle"
-    property "sonar.organization", "tealerr"
-    property "sonar.host.url", "https://sonarcloud.io"
-  }
+sonarqube {
+    properties {
+        property "sonar.projectKey", "tealerr_java-gradle"
+        property "sonar.organization", "tealerr"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 repositories {
@@ -17,16 +18,18 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
 }
 
+// Apply the application plugin
+apply plugin: 'application'
+
 application {
     // Define the main class for the application.
-    mainClass = 'demogradle.Looping'
+    mainClassName = 'demogradle.Looping'
 }
 
 tasks.named('test') {
@@ -34,11 +37,8 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-apply plugin: 'java'
-
 sourceSets {
     main {
         java.srcDirs = ['src/main/java']
     }
 }
-
